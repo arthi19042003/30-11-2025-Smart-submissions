@@ -1,0 +1,266 @@
+.page.interviewer-bg {
+  min-height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px 0 60px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+ 
+.card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  width: 85%;
+  max-width: 1050px;
+  margin: 0 auto 35px;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(75, 63, 255, 0.12);
+  animation: fadeUp 0.35s ease-in-out;
+}
+ 
+.form-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #5b21b6;
+  margin-bottom: 25px;
+}
+ 
+.section-label {
+  color: #5b21b6;
+  font-weight: 700;
+  font-size: 17px;
+  margin: 16px 0 12px;
+  padding-left: 5px;
+  border-left: 4px solid #8b5cf6;
+}
+ 
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+ 
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+ 
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #222;
+}
+ 
+label span {
+  color: #dc2626;
+  font-weight: 700;
+  margin-left: 4px;
+}
+ 
+input,
+select,
+textarea {
+  padding: 11px;
+  border-radius: 8px;
+  border: 1px solid #c8c2ff;
+  background: #faf9ff;
+  font-size: 14px;
+  transition: 0.3s;
+}
+ 
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #6a5cff;
+  box-shadow: 0 0 8px rgba(110, 89, 255, 0.3);
+  outline: none;
+}
+ 
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+ 
+.purple-btn {
+  background: linear-gradient(90deg, #6a5cff, #947dff);
+  color: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: 0.25s ease;
+}
+ 
+.purple-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(110, 89, 255, 0.28);
+}
+ 
+.rating-stars {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+ 
+.star {
+  font-size: 22px;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.2s;
+}
+ 
+.star.active {
+  color: #ffb800;
+}
+ 
+.records-card {
+  margin-top: 40px;
+}
+ 
+/* --- Updated Search Row Styles --- */
+.search-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.search-wrapper,
+.filter-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon,
+.filter-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6a5cff; 
+  pointer-events: none;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+/* Ensure the input has padding so text doesn't overlap icon */
+.search-wrapper input,
+.filter-wrapper select {
+  padding-left: 35px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- FIX: Responsive Table Wrapper --- */
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+ 
+/* --- FIX: Grid Layout Updates --- */
+.table-header,
+.table-row {
+  display: grid;
+  /* Defined columns for specific content */
+  grid-template-columns: 1.5fr 1.2fr 1.2fr 1fr 1fr 0.6fr 0.8fr;
+  padding: 11px 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  align-items: center;
+  /* Force minimum width so columns don't squash */
+  min-width: 800px; 
+}
+ 
+.table-header {
+  font-weight: 700;
+  color: #5b21b6;
+  background: rgba(240, 240, 255, 0.6);
+  border-radius: 8px;
+  text-align: center;
+}
+ 
+.table-row:hover {
+  background: rgba(240, 240, 255, 0.4);
+}
+ 
+.table-header > span,
+.table-row > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ 
+.table-header > span:first-child,
+.table-row > span:first-child {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+/* Updated: Ensure status text is black */
+.status-pill {
+  color: #000 !important;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+ 
+.row-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+ 
+.icon {
+  cursor: pointer;
+  font-size: 18px;
+  color: #6a5cff;
+  transition: 0.25s;
+}
+ 
+.icon:hover {
+  transform: scale(1.15);
+}
+ 
+.icon.delete {
+  color: #ff4c72;
+}
+ 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+ 
+  .card {
+    width: 92%;
+    padding: 22px;
+  }
+ 
+  /* Table font size slightly smaller on mobile, but layout handled by scroll */
+  .table-header,
+  .table-row {
+    font-size: 13px;
+  }
+}
